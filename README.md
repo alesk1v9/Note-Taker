@@ -6,7 +6,7 @@ A note taker application made using Express and Node.js allows users to create, 
 
 ## Screenshots
 
-![App Screenshot](/screeshot/Screenshot.png)
+![App Screenshot](./screenshot/Screenshot.png)
 
 
 ## 🔗 Links
