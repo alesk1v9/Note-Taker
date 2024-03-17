@@ -32,4 +32,26 @@ apiRouter.post('/notes', (req, res) => {
         };
       });
 
+      apiRouter.delete('/notes/:id', (req, res) => {
+        const noteId = req.params.id;
+        fs.readFile('./db/db.json', 'utf8', (error, notesData) => {
+            if (error) {
+                console.error(error);
+            }
+            
+            let notes = JSON.parse(notesData);
+    
+            // Filter out the note with the provided id
+            const filteredNotes = notes.filter(note => note.id !== String(noteId));
+    
+            // Write the filtered notes array back to the file
+            fs.writeFile('./db/db.json', JSON.stringify(filteredNotes), (error) => {
+                if (error) {
+                    console.error(error);
+                }
+                res.status(204).end();
+            });
+        });
+    });
+
 module.exports = apiRouter;
