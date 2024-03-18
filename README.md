@@ -10,4 +10,4 @@ A note taker application made using Express and Node.js allows users to create, 
 
 
 ## 🔗 Links
-Deployed Aplication:
+Deployed Aplication: https://mysterious-meadow-80413-9a1a83adbc2c.herokuapp.com/
